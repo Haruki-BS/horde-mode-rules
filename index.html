@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>40K Horde Mode Rules</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <header>
         <h1>40K Horde Mode Rules</h1>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Search rules...">
+        </div>
         <nav>
             <ul>
+                <li><a href="#table-of-contents">Table of Contents</a></li>
                 <li><a href="#army-construction">Army Construction</a></li>
                 <li><a href="#table-setup">Table Setup</a></li>
                 <li><a href="#gameplay">Gameplay</a></li>
@@ -21,44 +26,181 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main>       
+        <!-- Índice -->
+        <section id="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#army-construction">Army Construction</a></li>
+                <li><a href="#table-setup">Table Setup</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+                <li><a href="#spawning">Spawning the Horde</a></li>
+                <li><a href="#ai">Horde AI</a></li>
+                <li><a href="#winning">Winning & Losing</a></li>
+                <li><a href="#tables">Tables and Decks</a>
+                    <ul>
+                        <li><a href="#resupply-table">Resupply Table</a></li>
+                        <li><a href="#misery-deck">Misery Deck</a></li>
+                        <li><a href="#spawning-tables">Spawning Tables</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Army Construction -->
         <section id="army-construction">
             <h2>Army Construction</h2>
             <p>In 40K Horde Mode, decide on a game size (1,000 or 2,000 points) and the number of players...</p>
+            <h3>Steps to Construct Players’ Armies:</h3>
+            <ul>
+                <li>Divide your total points equally among players, rounding down.</li>
+                <li>Each player’s army must include a Warlord and follow 10th Edition rules.</li>
+                <li>No enhancements may be taken; they are purchased during the game.</li>
+            </ul>
         </section>
 
+        <!-- Table Setup -->
         <section id="table-setup">
             <h2>Table Setup</h2>
-            <p>Follow these steps to set up the table and begin the game...</p>
+            <ol>
+                <li>Choose a Deployment randomly from the Leviathan or Pariah Nexus Mission Packs.</li>
+                <li>Place objective markers as per the mission pack's rules.</li>
+                <li>Create and mark Horde Spawning Zones based on the game size.</li>
+                <li>Set up the board with terrain only in No Man’s Land.</li>
+                <li>Shuffle the Misery Deck, Secret Objectives Deck, and Secondary Mission Deck.</li>
+                <li>Decide if the game will be 5 rounds or infinite.</li>
+            </ol>
         </section>
 
+        <!-- Gameplay -->
         <section id="gameplay">
             <h2>Gameplay</h2>
-            <p>40K Horde Mode uses the core rules with these alterations...</p>
+            <p>40K Horde Mode uses the core rules with these alterations:</p>
+            <ul>
+                <li>Players move through phases together and activate units in any order.</li>
+                <li>Players act as a single team. Their units count as friendly.</li>
+                <li>Players start with 2 CP and track them individually.</li>
+                <li>The Horde has the first turn but does not use Stratagems or army-wide rules.</li>
+                <li>A Resupply Step is added after the Battle-Shock Step in the Command Phase.</li>
+            </ul>
         </section>
 
+        <!-- Spawning the Horde -->
         <section id="spawning">
             <h2>Spawning the Horde</h2>
-            <p>Spawning the Horde is done via the following steps...</p>
+            <ol>
+                <li>Choose a Horde Spawning Zone.</li>
+                <li>Remove any units within the Spawn Zone.</li>
+                <li>Roll 2D6 to determine the spawn bracket.</li>
+                <li>Select a unit from the rolled bracket and place it in the Spawning Zone.</li>
+                <li>Repeat for each remaining zone.</li>
+            </ol>
         </section>
 
+        <!-- Horde AI -->
         <section id="ai">
             <h2>Horde AI</h2>
-            <p>The Horde follows a simple set of AI rules for movement, shooting, and other actions...</p>
+            <h3>Movement</h3>
+            <p>Horde units move toward the closest visible enemy, objective, or defender board edge, in that order.</p>
+            <h3>Actions</h3>
+            <ul>
+                <li>Advance if advantageous.</li>
+                <li>Shoot at the closest target or prioritize specific keywords (e.g., Leader, Anti-X).</li>
+                <li>Charge if equipped with melee weapons stronger than Close Combat Weapon.</li>
+            </ul>
         </section>
 
+        <!-- Winning and Losing -->
         <section id="winning">
-            <h2>Winning and Losing</h2>
-            <p>If the game is not being played in infinite mode, at the end of the fifth battle round...</p>
+            <h2>Winning & Losing</h2>
+            <p>If the game is not infinite mode, it ends after 5 rounds. Players win individually by completing their Secret Objectives.</p>
         </section>
 
+        <!-- Tables and Decks -->
         <section id="tables">
-            <h2>Tables and Cards</h2>
-            <p>Details about the resupply table, Misery Deck, and spawning tables...</p>
+            <h2>Tables and Decks</h2>
+
+            <!-- Resupply Table -->
+            <section id="resupply-table">
+                <h3>Resupply Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SP Cost</th>
+                            <th>Name</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Unnatural Stamina</td>
+                            <td>Horde units can shoot and charge after advancing.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Grudge Match</td>
+                            <td>+1 to hit and wound rolls for Horde attacks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Misery Deck -->
+            <section id="misery-deck">
+                <h3>Misery Deck</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Blistering Speed</td>
+                            <td>Horde units advance 6" and charge 12" automatically.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Death Denied</td>
+                            <td>Every Horde unit on the battlefield returns to their starting strength.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Spawning Tables -->
+            <section id="spawning-tables">
+                <h3>Spawning Tables</h3>
+                <p>Refer to the specific unit spawning based on dice rolls. Example for Space Marines:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll Range</th>
+                            <th>Units</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3-4</td>
+                            <td>Eliminator Squad (3), Techmarine</td>
+                        </tr>
+                        <tr>
+                            <td>5-6</td>
+                            <td>Gladiator Valiant, Heavy Intercessor Squad (5)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
     <footer>
-        <p>40K Horde Mode Rules v1.0</p>
+        <p>40K Horde Mode Rules v1.0 | Made for fans, by fans.</p>
     </footer>
+    <!-- Botón Volver Arriba -->
+    <button id="back-to-top" title="Back to Top">↑</button>
 </body>
 </html>

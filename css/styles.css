@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #eaeaea;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #ffd700;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffd700;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #ffd700;
+    color: #1e1e1e;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background: #292929;
+    margin: 10px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #2f2f2f;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 5px;
+}
+
+section h3 {
+    margin-top: 20px;
+}
+
+/* Links and Highlights */
+a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.highlight {
+    background-color: #ffd700;
+    color: #1e1e1e;
+    transition: background-color 1s ease-out, color 1s ease-out;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    background: #f4f4f4;
+    color: #333;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #ffd700;
+    color: #1e1e1e;
+    text-transform: uppercase;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#resupply-table table td:first-child, 
+#misery-deck table td:first-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Details and Collapsible Sections */
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background: #444;
+    border-radius: 5px;
+    color: #ffd700;
+    transition: background 0.3s;
+}
+
+details summary:hover {
+    background: #ffd700;
+    color: #1e1e1e;
+}
+
+details[open] summary {
+    background: #ffd700;
+    color: #1e1e1e;
+}
+
+details div {
+    padding: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #ffd700;
+    border-top: 2px solid #444;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+/* Botón Volver Arriba */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none; /* Oculto por defecto */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #e5c100;
+    transform: scale(1.1);
+}
+
+/* Mostrar el botón */
+#back-to-top.show {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    #back-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
